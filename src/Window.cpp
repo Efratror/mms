@@ -1123,6 +1123,12 @@ QString Window::executeCommand(QString command) {
   } else if (function == "turnLeft45") {
     turn(Movement::TURN_LEFT_45);
     return "";
+  } else if (function == "pauseRun"){
+      onPauseButtonPressed();
+      return ACK;
+  } else if (function == "resumeRun"){
+      onPauseButtonPressed();
+      return ACK;
   } else if (function == "wasReset") {
     return boolToString(wasReset());
   } else if (function == "ackReset") {
